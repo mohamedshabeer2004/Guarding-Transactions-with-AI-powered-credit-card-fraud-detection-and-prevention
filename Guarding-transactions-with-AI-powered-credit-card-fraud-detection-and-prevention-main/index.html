@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fraud Detection System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-5">
+            <h1>AI-Powered Credit Card Fraud Detection</h1>
+            <p class="lead">Secure your transactions with advanced machine learning</p>
+        </header>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h3>Transaction Form</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="transactionForm">
+                            <div class="mb-3">
+                                <label for="cardNumber" class="form-label">Card Number</label>
+                                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="amount" class="form-label">Amount ($)</label>
+                                <input type="number" class="form-control" id="amount" placeholder="100.00" step="0.01" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="merchant" class="form-label">Merchant</label>
+                                <input type="text" class="form-control" id="merchant" placeholder="Amazon" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="location" placeholder="New York, US" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="timestamp" class="form-label">Date & Time</label>
+                                <input type="datetime-local" class="form-control" id="timestamp" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Check for Fraud</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h3>Detection Results</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="resultContainer" class="text-center py-4">
+                            <p class="text-muted">Submit a transaction to check for fraud</p>
+                        </div>
+                        <div id="transactionHistory" class="mt-4">
+                            <h5>Recent Transactions</h5>
+                            <div id="historyList" class="list-group"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-header bg-info text-white">
+                <h3>Fraud Prevention Tips</h3>
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li>Regularly monitor your transaction history</li>
+                    <li>Enable transaction alerts for all purchases</li>
+                    <li>Use virtual card numbers for online shopping</li>
+                    <li>Never share your CVV or PIN with anyone</li>
+                    <li>Report suspicious activity immediately</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 mt-5 bg-light">
+        <p>AI Fraud Detection System &copy; 2023</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
